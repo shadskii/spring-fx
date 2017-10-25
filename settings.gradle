@@ -1,0 +1,4 @@
+rootProject.name = 'spring-fx'
+include 'spring-fx-lifecycle'
+include 'example'
+

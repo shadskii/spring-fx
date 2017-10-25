@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/example.iml" filepath="$PROJECT_DIR$/.idea/modules/example.iml" group="example" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/example/example_main.iml" filepath="$PROJECT_DIR$/.idea/modules/example/example_main.iml" group="example" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/example/example_test.iml" filepath="$PROJECT_DIR$/.idea/modules/example/example_test.iml" group="example" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/spring-fx.iml" filepath="$PROJECT_DIR$/.idea/modules/spring-fx.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/spring-fx-lifecycle.iml" filepath="$PROJECT_DIR$/.idea/modules/spring-fx-lifecycle.iml" group="spring-fx-lifecycle" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/spring-fx-lifecycle/spring-fx-lifecycle_main.iml" filepath="$PROJECT_DIR$/.idea/modules/spring-fx-lifecycle/spring-fx-lifecycle_main.iml" group="spring-fx-lifecycle" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/spring-fx-lifecycle/spring-fx-lifecycle_test.iml" filepath="$PROJECT_DIR$/.idea/modules/spring-fx-lifecycle/spring-fx-lifecycle_test.iml" group="spring-fx-lifecycle" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/spring-fx_main.iml" filepath="$PROJECT_DIR$/.idea/modules/spring-fx_main.iml" group="spring-fx" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/spring-fx_test.iml" filepath="$PROJECT_DIR$/.idea/modules/spring-fx_test.iml" group="spring-fx" />
+    </modules>
+  </component>
+</project>
