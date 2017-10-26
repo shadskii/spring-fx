@@ -1,7 +1,16 @@
 group 'freetimelabs.spring.fx'
 version '1.0'
 
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.5.8.RELEASE")
+    }
+}
 apply plugin: 'java'
+apply plugin: 'org.springframework.boot'
 
 sourceCompatibility = 1.8
 
@@ -11,6 +20,7 @@ repositories {
 
 dependencies {
     compile project(':spring-fx-lifecycle')
-    compile group: 'org.springframework.boot', name: 'spring-boot-starter', version: '2.0.0.M5'
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter', version: '1.5.8.RELEASE'
+    compile group: 'org.springframework', name: 'spring-core', version: '5.0.0.RELEASE'
     testCompile group: 'junit', name: 'junit', version: '4.12'
 }

@@ -5,6 +5,8 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import org.springframework.boot.SpringApplication;
+import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.core.io.ClassPathResource;
 
 import java.io.IOException;
@@ -19,18 +21,22 @@ public class ExampleApplication extends Application
     }
 
     private Scene mainScene;
-
+    ConfigurableApplicationContext ctx;
     @Override
     public void init() throws Exception
     {
         FXMLLoader loader = new FXMLLoader(FXML.getURL());
         mainScene = new Scene(loader.load());
-//        Spring
+        SpringApplication application = new SpringApplication(Object.class);
+//        application.addInitializers(SpringFXLoader.loadFX(mainScene));
+        ctx = application.run();
     }
 
     @Override
     public void start(Stage primaryStage) throws Exception
     {
-
+        primaryStage.setTitle("Example application");
+        primaryStage.setScene(mainScene);
+        primaryStage.show();
     }
 }
