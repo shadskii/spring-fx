@@ -1,6 +1,5 @@
 package freetimelabs.example.fx;
 
-import freetimelabs.lifecycle.fx.SpringFXLoader;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -8,8 +7,6 @@ import javafx.stage.Stage;
 import org.springframework.boot.SpringApplication;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.core.io.ClassPathResource;
-
-import java.io.IOException;
 
 public class ExampleApplication extends Application
 {
@@ -22,6 +19,7 @@ public class ExampleApplication extends Application
 
     private Scene mainScene;
     ConfigurableApplicationContext ctx;
+
     @Override
     public void init() throws Exception
     {
