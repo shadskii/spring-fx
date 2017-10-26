@@ -24,6 +24,7 @@
 
 package freetimelabs.example.fx;
 
+import freetimelabs.lifecycle.fx.SpringFXLoader;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -50,8 +51,8 @@ public class ExampleApplication extends Application
     {
         FXMLLoader loader = new FXMLLoader(FXML.getURL());
         mainScene = new Scene(loader.load());
-        SpringApplication application = new SpringApplication(Object.class);
-//        application.addInitializers(SpringFXLoader.loadFX(mainScene));
+        SpringApplication application = new SpringApplication(ExampleApplicationConfig.class);
+        application.addInitializers(SpringFXLoader.loadFX(mainScene));
         ctx = application.run();
     }
 
@@ -62,4 +63,5 @@ public class ExampleApplication extends Application
         primaryStage.setScene(mainScene);
         primaryStage.show();
     }
+
 }

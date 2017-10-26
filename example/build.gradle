@@ -21,6 +21,5 @@ repositories {
 dependencies {
     compile project(':spring-fx-lifecycle')
     compile group: 'org.springframework.boot', name: 'spring-boot-starter', version: '1.5.8.RELEASE'
-    compile group: 'org.springframework', name: 'spring-core', version: '5.0.0.RELEASE'
     testCompile group: 'junit', name: 'junit', version: '4.12'
 }
