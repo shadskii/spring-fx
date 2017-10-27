@@ -54,6 +54,7 @@ public final class SceneGraphTraversal
                                                         .filter(Objects::nonNull)
                                                         .collect(Collectors.toList()));
         STRATEGIES.put(Labeled.class, l -> nullableNode(((Labeled) l)::getGraphic));
+        STRATEGIES.put(SplitPane.class, s -> ((SplitPane) s).getItems());
     }
 
     private static List<Node> nullableNode(Supplier<Node> supplier)
