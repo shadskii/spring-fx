@@ -44,7 +44,7 @@ public class ExampleApplication extends Application
     }
 
     private Scene mainScene;
-    ConfigurableApplicationContext ctx;
+    private ConfigurableApplicationContext ctx;
 
     @Override
     public void init() throws Exception
@@ -63,5 +63,4 @@ public class ExampleApplication extends Application
         primaryStage.setScene(mainScene);
         primaryStage.show();
     }
-
 }
