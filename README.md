@@ -1,5 +1,5 @@
 # spring-fx
-Spring-FX allows for better integration of the Spring Framework and JavaFX. By leveraging the dependency injection power of spring we coupling between .fxml files and their controllers. This allows for greater flexibility in moving code around and reduces the overall size of controllers.
+Spring-FX allows for better integration of the Spring Framework and JavaFX. By leveraging the dependency injection power of spring we are able to reduce coupling between .fxml files and their controllers. This allows for greater flexibility in moving code around and reduces the overall size of controllers.
 
 JavaFX components are loaded as spring beans during application initialization.
 ```java
