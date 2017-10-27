@@ -28,13 +28,11 @@ import javafx.collections.FXCollections;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Accordion;
-import javafx.scene.control.ButtonBar;
-import javafx.scene.control.TitledPane;
-import javafx.scene.control.ToolBar;
+import javafx.scene.control.*;
 
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
 /**
  * Used to load all {@link javafx.scene.Node}
@@ -50,12 +48,16 @@ public final class SceneGraphTraversal
         STRATEGIES.put(ButtonBar.class, b -> ((ButtonBar) b).getButtons());
         STRATEGIES.put(TitledPane.class, p -> FXCollections.observableArrayList(((TitledPane) p).getContent()));
         STRATEGIES.put(ToolBar.class, b -> ((ToolBar) b).getItems());
-
+        STRATEGIES.put(TabPane.class, t -> ((TabPane) t).getTabs()
+                                                        .stream()
+                                                        .map(Tab::getContent)
+                                                        .filter(Objects::nonNull)
+                                                        .collect(Collectors.toList()));
     }
 
     private SceneGraphTraversal()
     {
-        // Nothing
+        // No instance
     }
 
 
@@ -87,7 +89,8 @@ public final class SceneGraphTraversal
     {
         allNodes.add(node);
         Function<? super Node, List<? extends Node>> func = STRATEGIES.getOrDefault(node.getClass(), DEFAULT);
-        func.apply(node).forEach(n -> loadAll(n, allNodes));
+        func.apply(node)
+            .forEach(n -> loadAll(n, allNodes));
     }
 
 
