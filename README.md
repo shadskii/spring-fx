@@ -44,7 +44,7 @@ Controllers now can inject JavaFX components via `@Autowired`
     private Label middleText;
 ```
 
-Intialize is now replaced with a `@PostConstruct`
+`intialize` is now replaced with a `@PostConstruct`
 ```java
   @FXML
   public void intialize(){}
